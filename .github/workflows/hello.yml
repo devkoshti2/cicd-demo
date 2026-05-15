@@ -1,0 +1,24 @@
+name: MY First CI/CD workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Hello World
+        run: echo "Hello from github actions!"
+      - name: Date Check
+        run: date
+
+      - name: Files Dekho
+        run: ls -la
+
+      - name: Success Message
+        run: echo "CI/CD Pipeline successful!"
